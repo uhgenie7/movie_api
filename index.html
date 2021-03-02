@@ -4,37 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/movie_api/img/favicon.png"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="/movie_api/css/style.css" />
+    <link rel="stylesheet" href="/movie_api/css/search.css" />
     <title>Movie app</title>
   </head>
   <body>
+    <header>
+      <div class="center header_box">
+        <i class="fas fa-chevron-circle-left"></i>
+        <h2 class="result">영화 검색 서비스</h2>
+        <i class="fas fa-search"></i>
+      </div>
+    </header>
     <div class="search-box">
-      <input type="text" class="searchInput" />
+      <input
+        type="text"
+        class="searchInput"
+        placeholder="제목을 입력해주세요"
+      />
       <button type="button" class="sendBtn">검색</button>
     </div>
+
+    <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="config.js"></script>
-    <script>
-      $(function () {
-        function searchMovie() {
-          let searchResult = $(".searchInput").val();
-          if (!searchResult) {
-            alert("검색어를 입력해주세요");
-            return false;
-          }
-          location.href = "/movie_api/search.html?key=" + searchResult;
-        }
-        $(".sendBtn").click(function () {
-          searchMovie();
-        });
-
-        // press enter
-        document.addEventListener("keydown", function (e) {
-          const keyCode = e.keyCode;
-          if (keyCode == 13) {
-            searchMovie();
-          }
-        });
-      });
-    </script>
+    <script src="/movie_api/js/background.js"></script>
+    <script src="/movie_api/js/custom.js"></script>
   </body>
 </html>
