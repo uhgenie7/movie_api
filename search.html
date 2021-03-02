@@ -4,61 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/movie_api/img/favicon.png"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="/movie_api/css/style.css" />
+    <link rel="stylesheet" href="/movie_api/css/search.css" />
+    <link rel="stylesheet" href="/movie_api/css/media.css" />
+    <!-- awesome font -->
+    <script
+      src="https://kit.fontawesome.com/4d645dbcdc.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Movie app</title>
   </head>
   <body>
-    <div class="wrap">
-      <!-- <div class="movie_box">
-        <img src="" alt="" />
-        <h2>제목:</h2>
-        <p>감독:</p>
-        <p>개봉:</p>
-        <p>평점:</p>
-      </div> -->
+    <header>
+      <div class="center header_box">
+        <a href="http://localhost/movie_api/index.html">
+          <i class="fas fa-home"></i>
+        </a>
+        <h2 class="result">검색 결과</h2>
+        <i class="fas fa-search"></i>
+      </div>
+    </header>
+    <div class="search">
+      <h2 class="result">
+        <input
+          type="text"
+          class="searchInput"
+          placeholder="제목을 입력해주세요"
+        />
+      </h2>
     </div>
+    <section>
+      <img src="/movie_api/img/11.jpg" class="bg" />
+      <div class="wrap"></div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="config.js"></script>
+    <script src="/movie_api/js/search.js"></script>
+    <script src="/movie_api/js/custom.js"></script>
     <script>
-      $(function () {
-        let searchValue = document.location.href.split("=")[1];
-        let decodeValue = decodeURI(searchValue);
-        // decodeURI 함수: 인코드를 디코드 해줌 ex 깨지는 한글을 처리.
-        console.log(decodeValue);
-        $.ajax({
-          type: "POST",
-          url: "/movie_api/data/api.php",
-          data: {
-            // key 값은 꼭 data여야 함
-            search_value: decodeValue,
-          },
-          success: function (data) {
-            let obj = JSON.parse(data);
-            //console.log(obj);
-            // for (let i = 0; i < obj.items.length; i++) {
-            //   console.log(obj.items[i]);
-            // }
-            if (obj.items.length == 0) {
-              alert("데이터가 없습니다");
-              location.href = "/movie_api/index.html";
-            }
-
-            let itemContents = [];
-            $.each(obj.items, function (i, item) {
-              // console.log(i, item.title);
-              let itemHTML = `<div class="movie_box">
-                                <img src="${item.image}" alt="" />
-                                <h2>제목:${item.title}</h2>
-                                <p>감독:${item.director}</p>
-                                <p>개봉:${item.pubDate}</p>
-                                <p>평점:${item.userRating}</p>
-                              </div>`;
-              itemContents.push($(itemHTML).get(0));
-              console.log(itemContents);
-            });
-            $(".wrap").append(itemContents);
-          },
-        });
-      });
+      const search = document.querySelector(".search");
+      const faSearch = document.querySelector(".fa-search");
+      faSearch.addEventListener("click", clickEvent);
+      function clickEvent() {
+        search.classList.toggle("show");
+      }
     </script>
   </body>
 </html>
