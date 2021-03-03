@@ -32,17 +32,6 @@ header {
   margin: auto;
 }
 
-.header_box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header_box .fas {
-  font-size: 30px;
-  color: #fff;
-}
-
 .result {
   color: #fff;
   text-align: center;

@@ -11,17 +11,26 @@
       sizes="16x16"
       href="/movie_api/img/favicon.png"
     />
+    <!-- awesome font -->
+    <script
+      src="https://kit.fontawesome.com/4d645dbcdc.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- css file -->
     <link rel="stylesheet" href="/movie_api/css/style.css" />
     <link rel="stylesheet" href="/movie_api/css/search.css" />
+    <link rel="stylesheet" href="/movie_api/css/media.css" />
+
     <title>Movie app</title>
   </head>
-  <body>
+  <body class="body">
     <header>
       <div class="center header_box">
-        <i class="fas fa-chevron-circle-left"></i>
-        <h2 class="result">영화 검색 서비스</h2>
-        <i class="fas fa-search"></i>
+        <a href="/movie_api/genre/genre.html"><i class="fas fa-list"></i></a>
+        <a href="/movie_api/index.html"
+          ><h2 class="result">영화 검색 서비스</h2></a
+        >
+        <a href="/movie_api/movie_list.html"><i class="fas fa-video"></i></a>
       </div>
     </header>
     <div class="search-box">
@@ -38,5 +47,6 @@
     <script src="config.js"></script>
     <script src="/movie_api/js/background.js"></script>
     <script src="/movie_api/js/custom.js"></script>
+    <script src="/movie_api/js/recent.js"></script>
   </body>
 </html>
