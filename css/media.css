@@ -1,5 +1,5 @@
 @media screen and (max-width: 1650px) {
-  .wrap {
+  .searchWrap {
     width: 80%;
   }
   .category ul li a {
@@ -8,13 +8,24 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .wrap {
+  .searchWrap {
     width: 90%;
+  }
+  .genre-section {
+    padding: 0 10px;
+  }
+
+  .detailMovie {
+    padding: 50px 10px;
   }
 }
 
 @media screen and (max-width: 810px) {
-  .wrap {
+  .header_title {
+    font-size: 17px;
+  }
+
+  .searchWrap {
     width: 90%;
   }
 
@@ -35,12 +46,8 @@
     width: 50%;
     margin: 10px auto;
     padding: 10px;
-    /* left: 0;
-    top: 100%;
-    bottom: 0;
-    width: 100%;
-    height: 0; */
   }
+
   .recent-movie-wrap {
     width: 33.33%;
   }
@@ -49,8 +56,31 @@
     width: 90%;
   }
 
+  .mainTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainTitle .movieTxt {
+    margin: 0 5%;
+  }
+
+  .movieImg {
+    margin-bottom: 50px;
+  }
+
   .category ul li {
     margin: 5px;
+    padding: 10px;
+  }
+
+  /* slider */
+  .lSAction > a.lSNext,
+  .lSAction > a.lSPrev {
+    background-size: 70% auto;
+    top: 34%;
   }
 }
 
@@ -63,11 +93,11 @@
     max-width: 90%;
   }
 
-  .search {
+  .sub_search {
     height: inherit;
   }
 
-  .result {
+  .header_title {
     font-size: 17px;
   }
 
@@ -81,9 +111,6 @@
 
   .category ul li {
     margin: 2px;
-  }
-
-  .category ul li a {
     padding: 5px;
   }
 
