@@ -13,7 +13,6 @@
     />
     <!-- css file -->
     <link rel="stylesheet" href="/movie_api/css/style.css" />
-    <link rel="stylesheet" href="/movie_api/css/search.css" />
     <link rel="stylesheet" href="/movie_api/css/media.css" />
     <!-- awesome font -->
     <script
@@ -23,34 +22,36 @@
     <title>Movie app</title>
   </head>
   <body>
-    <header>
-      <div class="center header_box">
-        <a href="javascript:window.history.back();"
-          ><i class="fas fa-chevron-circle-left"></i
-        ></a>
-        <a href="/movie_api/index.html"><h2 class="result">검색 결과</h2></a>
-        <i class="fas fa-search"></i>
-      </div>
-    </header>
-    <div class="search">
-      <h2 class="result">
+    <div class="wrap">
+      <header class="header">
+        <div class="center header_box">
+          <a href="javascript:window.history.back();"
+            ><i class="fas fa-chevron-circle-left"></i
+          ></a>
+          <a href="/movie_api/index.html"
+            ><h2 class="header_title">검색 결과</h2></a
+          >
+          <i class="fas fa-search"></i>
+        </div>
+      </header>
+      <div class="sub_search">
         <input
           type="text"
           class="searchInput"
           placeholder="제목을 입력해주세요"
         />
-      </h2>
+      </div>
+      <section>
+        <img src="/movie_api/img/11.jpg" class="bg" />
+        <div class="searchWrap"></div>
+      </section>
     </div>
-    <section>
-      <img src="/movie_api/img/11.jpg" class="bg" />
-      <div class="wrap"></div>
-    </section>
+    <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="config.js"></script>
     <script src="/movie_api/js/search.js"></script>
     <script src="/movie_api/js/custom.js"></script>
     <script>
-      const search = document.querySelector(".search");
+      const search = document.querySelector(".sub_search");
       const faSearch = document.querySelector(".fa-search");
       faSearch.addEventListener("click", clickEvent);
       function clickEvent() {

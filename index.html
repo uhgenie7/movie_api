@@ -18,34 +18,38 @@
     ></script>
     <!-- css file -->
     <link rel="stylesheet" href="/movie_api/css/style.css" />
-    <link rel="stylesheet" href="/movie_api/css/search.css" />
     <link rel="stylesheet" href="/movie_api/css/media.css" />
-
     <title>Movie app</title>
   </head>
-  <body class="body">
-    <header>
-      <div class="center header_box">
-        <a href="/movie_api/genre/genre.html"><i class="fas fa-list"></i></a>
-        <a href="/movie_api/index.html"
-          ><h2 class="result">영화 검색 서비스</h2></a
-        >
-        <a href="/movie_api/movie_list.html"><i class="fas fa-video"></i></a>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="center header_box">
+          <a href="/movie_api/genre/general.html"
+            ><i class="fas fa-list"></i
+          ></a>
+          <a href="/movie_api/index.html"
+            ><h2 class="header_title">영화 검색 서비스</h2></a
+          >
+          <a href="/movie_api/movie_list.html"><i class="fas fa-video"></i></a>
+        </div>
+      </header>
+      <div class="search-box">
+        <input
+          type="text"
+          class="searchInput"
+          placeholder="제목을 입력해주세요"
+        />
+        <button type="button" class="sendBtn">검색</button>
       </div>
-    </header>
-    <div class="search-box">
-      <input
-        type="text"
-        class="searchInput"
-        placeholder="제목을 입력해주세요"
-      />
-      <button type="button" class="sendBtn">검색</button>
+      <div class="movieBack">
+        <video loop autoplay muted>
+          <source src="/movie_api/img/movie1.mov" />
+        </video>
+      </div>
     </div>
-
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="config.js"></script>
-    <script src="/movie_api/js/background.js"></script>
     <script src="/movie_api/js/custom.js"></script>
     <script src="/movie_api/js/recent.js"></script>
   </body>
