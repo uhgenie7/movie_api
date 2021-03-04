@@ -4,21 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail page</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/movie_api/img/favicon.png"
+    />
+    <!-- awesome font -->
+    <script
+      src="https://kit.fontawesome.com/4d645dbcdc.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- lightslider plugin -->
+    <link rel="stylesheet" href="/movie_api/plugin/lightslider.css" />
+    <!-- css file -->
+    <link rel="stylesheet" href="/movie_api/css/style.css" />
+    <link rel="stylesheet" href="/movie_api/css/media.css" />
+
+    <title>Movie app</title>
   </head>
   <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="center header_box">
+          <a href="/movie_api/genre/general.html"
+            ><i class="fas fa-list"></i
+          ></a>
+          <a href="javascript:window.history.back();">
+            <h2 class="header_title"></h2>
+          </a>
+          <a href="/movie_api/movie_list.html"><i class="fas fa-video"></i></a>
+        </div>
+      </header>
+      <div class="loading">
+        <img src="/movie_api/img/loading.gif" alt="" />
+      </div>
+      <section class="detailMovie">
+        <h2 class="theDetail">DETAIL MOVIE</h2>
+        <div class="mainTitle">
+          <!-- <div class="movieImg">
+          <img src="/movie_api/img/new-arrival-3.jpg" alt="" />
+        </div>
+        <div class="movieTxt">
+          <h2>영화 이름 (개봉일)</h2>
+          <h3>장르:</h3>
+          <h3>시놉시스:</h3>
+          <p></p>
+          <h3>⭐:</h3>
+          <h4>💚:</h4>
+        </div> -->
+        </div>
+        <!-- <div class="subTitle">
+        <p></p>
+      </div> -->
+      </section>
+      <section>
+        <div class="genre-section">
+          <div class="all genre_cate">
+            <h2 class="theOther">THE OTHER MOVIES</h2>
+            <div class="all-contents" id="allSlide"></div>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        let detailID = document.location.href.split("=")[1];
-        console.log(detailID);
-        $.ajax({
-          url: "https://yts.mx/api/v2/movie_details.json?movie_id=" + detailID,
-          success: function (detailData) {
-            console.log(detailData);
-          },
-        });
-      });
-    </script>
+    <script src="/movie_api/plugin/lightslider.js"></script>
+    <script src="/movie_api/js/detail.js"></script>
   </body>
 </html>
