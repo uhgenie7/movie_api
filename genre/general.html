@@ -16,72 +16,113 @@
       src="https://kit.fontawesome.com/4d645dbcdc.js"
       crossorigin="anonymous"
     ></script>
-    <!-- movie_api plugin -->
+    <!-- lightslider plugin -->
     <link rel="stylesheet" href="/movie_api/plugin/lightslider.css" />
     <!-- css file -->
     <link rel="stylesheet" href="/movie_api/css/style.css" />
-    <link rel="stylesheet" href="/movie_api/css/search.css" />
     <link rel="stylesheet" href="/movie_api/css/media.css" />
     <title>Movie app</title>
   </head>
   <body>
-    <header>
-      <div class="center header_box">
-        <a href="/movie_api/index.html"><i class="fas fa-home"></i></a>
-        <a href="/movie_api/genre/genre.html"><h2 class="result">ALL</h2></a>
-        <i class="fas fa-search"></i>
-      </div>
-    </header>
-    <div class="search">
-      <h2 class="result">
+    <div class="wrap">
+      <header class="header">
+        <div class="center header_box">
+          <a href="/movie_api/index.html"><i class="fas fa-home"></i></a>
+          <a href="/movie_api/genre/general.html"
+            ><h2 class="header_title">분류</h2></a
+          >
+          <i class="fas fa-search"></i>
+        </div>
+      </header>
+      <div class="sub_search">
         <input
           type="text"
           class="searchInput"
           placeholder="제목을 입력해주세요"
         />
-      </h2>
-    </div>
-    <div class="category">
-      <ul>
-        <li class="action"><a href="/movie_api/genre/genre.html">ALL</a></li>
-        <li><a href="/movie_api/genre/comedy.html">COMEDY</a></li>
-        <li><a href="/movie_api/genre/sci-fi.html">SCI-FI</a></li>
-        <li><a href="/movie_api/genre/horror.html">HORROR</a></li>
-        <li><a href="/movie_api/genre/romance.html">ROMANCE</a></li>
-        <li><a href="/movie_api/genre/action.html">ACTION</a></li>
-        <li><a href="/movie_api/genre/thriller.html">THRILLER</a></li>
-        <li><a href="/movie_api/genre/drama.html">DRAMA</a></li>
-        <li><a href="/movie_api/genre/mystery.html">MYSTERY</a></li>
-        <li><a href="/movie_api/genre/crime.html">CRIME</a></li>
-        <li><a href="/movie_api/genre/animation.html">ANIMATION</a></li>
-        <li><a href="/movie_api/genre/adventure.html">ADVENTURE</a></li>
-        <li><a href="/movie_api/genre/fantasy.html">FANTASY</a></li>
-      </ul>
-    </div>
-    <!-- <div class="loading">
-      <img src="/movie_api/img/loading.gif" alt="" />
-    </div> -->
-    <div class="genre-section">
-      <div class="action">
-        <div class="action-contents" id="actionSlide">
-          <!-- <div class="slide-box">
-            <div>
-              <img src="/movie_api/img/new-arrival-3.jpg" alt="" />
-              <div class="slider-tit">
-                <h3>Movie Title</h3>
-                <p class="rating">Rating : 8.0</p>
-              </div>
-              <a href="#">Details</a>
-            </div>
-          </div> -->
-          <!-- end of slide-box -->
+      </div>
+      <div class="category">
+        <ul>
+          <li class="action">ALL</li>
+          <li>COMEDY</li>
+          <li>SCI-FI</li>
+          <li>HORROR</li>
+          <li>ROMANCE</li>
+          <li>ACTION</li>
+          <li>THRILLER</li>
+          <li>DRAMA</li>
+          <li>MYSTERY</li>
+          <li>CRIME</li>
+          <li>ANIMATION</li>
+          <li>ADVENTURE</li>
+          <li>FANTASY</li>
+        </ul>
+      </div>
+      <div class="loading">
+        <img src="/movie_api/img/loading.gif" alt="" />
+      </div>
+      <div class="genre-section">
+        <div class="all genre_cate">
+          <h2 class="genre">ALL</h2>
+          <div class="all-contents" id="allSlide"></div>
         </div>
-      </div>
-      <div class="romance">
-        <div class="romance-contents" id="romanceSlide"></div>
-      </div>
-      <div class="drama">
-        <div class="drama-contents" id="dramaSlide"></div>
+        <div class="comedy genre_cate">
+          <h2 class="genre">COMEDY</h2>
+          <div class="comedy-contents" id="comedySlide"></div>
+        </div>
+        <div class="sci-fi genre_cate">
+          <h2 class="genre">SCI-FI</h2>
+          <div class="sci-fi-contents" id="sci-fiSlide"></div>
+        </div>
+        <div class="horror genre_cate">
+          <h2 class="genre">HORROR</h2>
+          <div class="horror-contents" id="horrorSlide"></div>
+        </div>
+        <div class="romance genre_cate">
+          <h2 class="genre">ROMANCE</h2>
+
+          <div class="romance-contents" id="romanceSlide"></div>
+        </div>
+        <div class="action genre_cate">
+          <h2 class="genre">ACTION</h2>
+
+          <div class="action-contents" id="actionSlide"></div>
+        </div>
+        <div class="thriller genre_cate">
+          <h2 class="genre">THRILLER</h2>
+
+          <div class="thriller-contents" id="thrillerSlide"></div>
+        </div>
+        <div class="drama genre_cate">
+          <h2 class="genre">DRAMA</h2>
+
+          <div class="drama-contents" id="dramaSlide"></div>
+        </div>
+        <div class="mystery genre_cate">
+          <h2 class="genre">MYSTERY</h2>
+
+          <div class="mystery-contents" id="mysterySlide"></div>
+        </div>
+        <div class="crime genre_cate">
+          <h2 class="genre">CRIME</h2>
+
+          <div class="crime-contents" id="crimeSlide"></div>
+        </div>
+        <div class="animation genre_cate">
+          <h2 class="genre">ANIMATION</h2>
+
+          <div class="animation-contents" id="animationSlide"></div>
+        </div>
+        <div class="adventure genre_cate">
+          <h2 class="genre">ADVENTURE</h2>
+
+          <div class="adventure-contents" id="adventureSlide"></div>
+        </div>
+        <div class="fantasy genre_cate">
+          <h2 class="genre">FANTASY</h2>
+
+          <div class="fantasy-contents" id="fantasySlide"></div>
+        </div>
       </div>
     </div>
 
@@ -91,7 +132,7 @@
     <script src="/movie_api/js/custom.js"></script>
     <script src="/movie_api/js/general.js"></script>
     <script>
-      const search = document.querySelector(".search");
+      const search = document.querySelector(".sub_search");
       const faSearch = document.querySelector(".fa-search");
       faSearch.addEventListener("click", clickEvent);
       function clickEvent() {
