@@ -42,7 +42,7 @@
               itemContents.push($(itemHTML).get(0));
               // console.log(itemContents);
             });
-            $(".wrap").append(itemContents);
+            $(".searchWrap").append(itemContents);
           },
         });
       });
