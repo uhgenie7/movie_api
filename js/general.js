@@ -10,7 +10,7 @@ $(function () {
                                   <div class="slide-box">
                                     <a href="/movie_api/genre/detail.html?id=${data.data.movies[i].id}">
                                       <div>
-                                        <img src="${data.data.movies[i].medium_cover_image}" alt="" />
+                                        <img src="${data.data.movies[i].medium_cover_image}" alt="" onError="this.src='/movie_api/img/replace.jpg';"/>
                                         <div class="slider-tit">
                                           <h3 class="movie_title">${data.data.movies[i].title}</h3>
                                           <p class="rating">Rating : 8.0${data.data.movies[i].rating}</p>
@@ -24,14 +24,33 @@ $(function () {
         }
         $(box).append(getGenres);
         
-        // slide
-        $(slideID).lightSlider({
-          item: 5,
-          slideMove: 1,
-          auto: true,
-          loop: true,
-          speed: 400,
-        });
+        // lightslide
+          $(slideID).lightSlider({
+            item: 5,
+            slideMove: 1,
+            auto: true,
+            loop: true,
+            speed: 400,
+            responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
+          });
+      
+        // success function end
       }
     });
   }
@@ -42,6 +61,7 @@ $(function () {
     getgenre(getGenres[i], '.' + getGenres[i] + '-contents', '#'+getGenres[i] + 'Slide');
   }
 
+  // click event
   $(".category ul li").click(function (e) {
     $(".category ul li").removeClass("action");
     $(this).toggleClass("action");
@@ -55,6 +75,7 @@ $(function () {
     }
   });
 
+  // loading...
     $(document).ajaxComplete(function () {
     $(".loading").hide();
   });
