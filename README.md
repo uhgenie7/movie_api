@@ -19,10 +19,8 @@
 
 
 ## 주요 특징
-- No Jquery
-  - ❌순수 자바스크립트로 구현
-- css 속성 중 grid 속성 사용
-- 반응형
+- 네이버 오픈 API로 영화 검색 구현
+- yts가 제공해주는 API를 받아 영화 리스트 구현 및 상세 정보 페이지
 
 ## 사용한 언어
 
@@ -31,6 +29,7 @@
 - [HTML5]
 - [CSS3]
 - [JavaScript]
+- [Jquery]
 
 ## 플러그인
 
@@ -38,6 +37,7 @@
 
 | Plugin | Website |
 | ------ | ------ |
-| swiperjs | https://swiperjs.com/ |
+| lightslider.js | http://sachinchoolur.github.io/lightslider/index.html |
+
 
 
