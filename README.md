@@ -10,7 +10,7 @@
 </h1>
 
 <p align='middle'>
-  <strong>Movie-Api</strong>네이버 open API와 yts API를 이용한 영화 검색 사이트입니다.
+  <strong>Movie-Api</strong>는 네이버 open API와 yts API를 이용한 영화 검색 사이트입니다.
 </p>
 
 ## 사이트
