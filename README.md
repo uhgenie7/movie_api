@@ -9,6 +9,12 @@
   <a href='http://uhj1993.dothome.co.kr/movie_api/index.html'>🎞Movie-Api</a>
 </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-323330?style=flat-square&logo=HTML5&logoColor=E34F26" height="24" />
+  <img src="https://img.shields.io/badge/CSS3-323330?style=flat-square&logo=CSS3&logoColor=1572B6" height="24" />
+  <img src="https://img.shields.io/badge/Javascript-323330?style=flat-square&logo=JavaScript&logoColor=f0db4f" height="24" />
+</p>
+
 <p align='middle'>
   <strong>Movie-Api</strong>는 네이버 open API와 yts API를 이용한 영화 검색 사이트입니다.
 </p>
