@@ -46,4 +46,10 @@
 | lightslider.js | http://sachinchoolur.github.io/lightslider/index.html |
 
 
+## 웹 품질 검사
+이 사이트는 웹 표준을 및 웹 품질을 준수하였습니다.
+
+![html5-blue](https://user-images.githubusercontent.com/72803184/113370127-0a308580-939e-11eb-92fc-3963f7b472ca.png)
+![vcss](https://user-images.githubusercontent.com/72803184/113369977-a908b200-939d-11eb-8197-042a72052e72.gif)
+
 
