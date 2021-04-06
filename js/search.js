@@ -13,14 +13,14 @@
           success: function (data) {
             let obj = JSON.parse(data);
             console.log(obj);
-            // for (let i = 0; i < obj.items.length; i++) {
-            //   console.log(obj.items[i]);
-            // }
             if (obj.items.length == 0) {
               alert("데이터가 없습니다");
               location.href = "/movie_api/index.html";
             }
-
+            // 데이터가 적을 때 예외처리
+            if (obj.items.length > 4) {
+              $('.bg').remove();
+            }
             let itemContents = [];
             $.each(obj.items, function (i, item) {
               // console.log(i, item.title);
