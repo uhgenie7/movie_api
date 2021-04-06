@@ -299,6 +299,7 @@ body {
   display: inline-block;
   padding: 20px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 .category ul li.action {
