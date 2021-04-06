@@ -27,9 +27,9 @@ $(function () {
     function getgenre(gen, box, slideID) {
     let getGenres = [];
     $.ajax({
-    url: 'https://yts.mx/api/v2/list_movies.json?genre='+gen+'&page=1&limit=15',
+    url: 'https://yts.mx/api/v2/list_movies.json?genre='+gen+'&page=1&limit=30',
     success: function (data) {
-      // console.log(data);
+      console.log(data);
       for (let i = 0; i < data.data.movies.length; i++){
         let genreHTML = `
                                   <div class="slide-box">
