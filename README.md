@@ -21,7 +21,7 @@
 
 ## 사이트
 
-- [메인페이지](http://uhj1993.dothome.co.kr/movie_api)
+- [메인페이지](http://devuhj.com/movie_api)
 
 
 ## 주요 특징
